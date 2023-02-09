@@ -8,7 +8,7 @@ const app = express()
 app.use(bodyParser.urlencoded( {extended: true} ))
 
 app.get('/produtos', (req, res, next) => {
-    res.send(bancoDeDados.getProdutos) // Send converte para JSON
+    res.send(bancoDeDados.getProdutos()) // Send converte para JSON
 })
 
 app.get('/produtos/:id', (req, res, next) => {
